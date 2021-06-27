@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    background-color: rgba(48,55,74,255);
+    height: 750px;
+    width: 500px;
+    margin-top: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 12px;
+}
+
+.two-column-grid__expand-one {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-bottom: 2rem;
+}
+
+.nav-icon {
+    width: 30px;
+    height: auto;
+    margin-top: 1rem;
+    margin-left: 5px;
+    padding: 5px;
+    transition: background-color;
+}
+
+.center {
+    text-align: center;
+    /* max-width: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem; */
+}
+
+.profile-picture {
+    height: auto;
+    width: 160px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.white-text {
+    font-size: 4ch;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.grey-text {
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.followers {
+    color: rgba(200, 200, 200, 0.376);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2ch;
+}
+
+h1 {
+    font-size: 5ch;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+.three-column-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    place-items: center;
+    margin-left: 1rem;
+}
+
+.logo {
+    max-width: 80px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+    transition: 2s;
+}
+
+.hire-me {
+    border-radius: 60px;
+    background-image: linear-gradient(90deg, #8203a0 27%, #FC00FF 100%);
+    color: white;
+    text-decoration: none;
+    height: 50px;
+    width: 180px;
+    font-size: 2ch;
+
+    transition: 1s;
+}
+
+
+hr {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+/* Animations */
+
+.card:hover {
+    animation: levitate 0.5s;
+    box-shadow: 20px 20px 20px 0 #00000050;
+    animation: expand 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes expand {
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes levitate {
+    100% {
+      box-shadow: 50px 50px 50px 0 #00000050;
+
+    }
+  }
+
+.nav-icon:hover {
+    background-color: rgba(211, 211, 211, 0.733);
+    border-radius: 50%;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+}
+
+.hire-me:hover {
+    animation: shake 1s;
+}
+
+@keyframes shake {
+    25% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+.profile-picture:hover {
+    animation: grow 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes grow {
+    25% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
